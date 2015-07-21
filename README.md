@@ -2,7 +2,7 @@
 
 现在就加入 [**FrontSeat**](http://frontseat.io) 一个专注前端的开源中文社区！
 
-前端开发笔记本，是学习《网易前端微专业》时整理的笔记。笔记参考了[frontend-note by li-xinyang]((https://www.gitbook.com/read/book/li-xinyang/frontend-notebook))的内容，在此内容的基础上对知识点进行了逻辑上的梳理和总结，使得知识点更加容易理解。
+前端开发笔记本，是学习《网易前端微专业》时整理的笔记。笔记参考了[FEND_NOTE by li-xinyang](https://www.github.com/li-xinyang/FEND_NOTE)的内容，在此内容的基础上对知识点进行了逻辑上的梳理和总结，使得知识点更加容易理解。
 
 前端开发笔记本的 GitHub 地址在[这里](https://github.com/ChanShuYi/FrontEnd_NOTE)。如果你觉得这个项目不错，请点击 Star 一下，您的支持是我最大的动力。
 
@@ -28,7 +28,7 @@
 
 - [NEC](http://nec.netease.com/) {N: nice, E: easy, C: css;}
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.github.com/ChanShuYi" property="cc:attributionName" rel="cc:attributionURL">Li Xinyang</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.github.com/ChanShuYi" property="cc:attributionName" rel="cc:attributionURL">ChanShuYi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 <!-- Place this tag right after the last button or just before your close body tag. -->
 <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
