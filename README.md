@@ -2,8 +2,6 @@
 
 现在就加入 [**FrontSeat**](http://frontseat.io) 一个专注前端的开源中文社区！
 
-前端开发笔记本，是学习《网易前端微专业》时整理的笔记。笔记参考了[FEND_NOTE by li-xinyang](https://www.github.com/li-xinyang/FEND_NOTE)的内容，在此内容的基础上对知识点进行了逻辑上的梳理和总结，使得知识点更加容易理解。
-
 前端开发笔记本的 GitHub 地址在[这里](https://github.com/ChanShuYi/FrontEnd_NOTE)。如果你觉得这个项目不错，请点击 Star 一下，您的支持是我最大的动力。
 
 <!-- Place this tag where you want the button to render. -->
@@ -18,11 +16,11 @@
 
 |章节|名称|进程|
 |----|----|----|
-|第一章|页面制作|![](http://progressed.io/bar/10)|
-|第二章|JavaScript 程序设计|![](http://progressed.io/bar/10)|
-|第三章|DOM 编程|![](http://progressed.io/bar/10)|
-|第四章|页面构架|![](http://progressed.io/bar/10)|
-|第五章|前端产品构架|![](http://progressed.io/bar/10)|
+|第一章|页面制作|![](http://progressed.io/bar/100)|
+|第二章|JavaScript 程序设计|![](http://progressed.io/bar/100)|
+|第三章|DOM 编程|![](http://progressed.io/bar/100)|
+|第四章|页面构架|![](http://progressed.io/bar/100)|
+|第五章|前端产品构架|![](http://progressed.io/bar/100)|
 
 ### 相关链接
 
