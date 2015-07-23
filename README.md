@@ -4,7 +4,7 @@
 
 前端开发笔记本涵括了大部分前端开发所需的知识点，主要包括5大部分：《页面制作》、《JavaScript程序设计》、《DOM编程》、《页面架构》、《前端产品架构》。
 
-点击阅读[**前端开发笔记本**](http://chanshuyi.github.io/frontend_notebook/)
+点击[**这里**](http://chanshuyi.github.io/frontend_notebook/)开始阅读！
 
 前端开发笔记本的 GitHub 地址在[这里](https://github.com/ChanShuYi/FrontEnd_NOTE)。如果你觉得这个项目不错，请点击 Star 一下，您的支持是我最大的动力。
 
