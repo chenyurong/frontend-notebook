@@ -2,6 +2,8 @@
 
 现在就加入 [**FrontSeat**](http://frontseat.io) 一个专注前端的开源中文社区！
 
+前端开发笔记本涵括了大部分前端开发所需的知识点，主要包括5大部分：《页面制作》、《JavaScript程序设计》、《DOM编程》、《页面架构》、《前端产品架构》。
+
 前端开发笔记本的 GitHub 地址在[这里](https://github.com/ChanShuYi/FrontEnd_NOTE)。如果你觉得这个项目不错，请点击 Star 一下，您的支持是我最大的动力。
 
 <!-- Place this tag where you want the button to render. -->
