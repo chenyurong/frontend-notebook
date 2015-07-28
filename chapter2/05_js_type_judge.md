@@ -239,3 +239,17 @@ JavaScript的数据类型可以分为：标准类型和对象类型。
 ![](../img/J/javascript-type-judge.png)
 
 其中红色的单元格表示该判断方式不支持的类型。
+
+虽然这4种判断方式有的几乎能判断全部的类型，但它们都由自己判断的侧重点。
+
+- `===` 善于判断`undefined` `Null`
+- `typeof` 善于判断基本类型
+- `toString` 善于判断内置对象类型
+- `instanceof` 善于判断自定义对象类型
+
+|判断方式|类型|
+|:--:|:--|
+|===|undefined Null|
+|typeof|String Number Boolean Object|
+|toString|String Number Boolean Objet Array Date Error Function RegExp|
+|instaceof|MyClassA MyClassB ...|

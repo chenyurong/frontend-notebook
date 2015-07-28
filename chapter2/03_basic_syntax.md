@@ -13,9 +13,10 @@
 
 ## 基本语法
 
-### 变量标示符
+### 变量标识符
 
-**变量**的命名
+- 第一个字符必须是一个字母、下划线（_）或一个美元符号（$）
+- 其他字符可以是字母、下划线、美元符号或数字
 
 ```javascript
 var _name = null;
@@ -26,6 +27,26 @@ var name0 = null;
 ### 关键字与保留字
 
 JavaScript 在语言定义中保留的字段，这些字段在语言使用中存在特殊意义或功能，在程序编写的过程中不可以当做变量或函数名称使用。无需记忆，报错修改即可。
+
+```
+//ECMAScript的全部关键字
+break	else	new		var
+case	finally	return	void
+catch 	for		switch	while
+continue	function	this	with
+default		if			throw	
+delete		in			try
+do			instanceof	typeof
+//ECMA-262第3版定义的所有保留字
+abstract	enum	int		short
+boolean 	export	interface	static
+byte		extends	long		super
+char		final	native		synchronized
+class		float	package		throws
+const		goto	private		transient
+debugger	implements	protected	volatile
+double 		import	public
+```
 
 ### 字符敏感
 
@@ -71,3 +92,26 @@ JavaScript 在语言定义中保留的字段，这些字段在语言使用中存
 
 // 单行注释
 ```
+
+### JavaScript中的参数
+
+ECMAScript函数的参数与大多数其他语言中的函数参数有所不同，ECMAScript函数不介意床底多少个参数，也不在乎传进来的参数是什么数据类型。
+
+```
+//普通函数
+function sayHi(name, message){
+	alert("Hello " + name + message);
+}
+//用arguments获取参数
+function sayHi(){
+	alert("Hello " + arguments[0] + arguments[1]);
+}
+```
+
+上面两个函数都是合法并且功能相同的。这个事实说明了ECMAScript函数的一个重要特点：命名的参数只是提供便利，但不是必须的。
+
+NOTE：ECMAScript中的所有参数传递都是值，不可能通过引用传递参数。
+
+
+
+
