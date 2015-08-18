@@ -150,6 +150,12 @@
 
 `display:none` 与 `visibility:hidden` 的区别为 `display:none` 不显示且不占位，但 `visibility:hidden` 不显示但占位。
 
+|特点|元素|
+|---|---|
+|默认display属性为block的元素|div, p, h1-h6, ul, form|
+|默认display属性为inline的元素|span, a, label, cite, em|
+|默认display属性为inline-block的元素|input, textarea, select, button|
+
 #### position
 
 `position` 用于设置定位的方式。而`top` `right` `bottom` `left` `z-index` 属性则用于设置元素相对于参照物的位置（5个属性必须配合position一同使用）。

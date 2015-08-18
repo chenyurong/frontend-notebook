@@ -31,6 +31,8 @@ background-color: rgba(255, 0, 0, 0.5);
 background-color: transparent; /* 默认值 */
 ```
 
+NOTE：rgba和opacity都能实现透明效果，但最大的不同是opacity作用于元素，以及元素内的所有内容的透明度，而rgba只作用于元素的颜色或其背景色 。
+
 #### background-image
 
 ```
