@@ -107,6 +107,29 @@ NOTE：并不是所有事件都会有这3个过程。比如在IE的事件流中�
 - listener：表示要绑定的函数
 - useCapture：可选参数，表示是否捕获过程
 
+**事件注册的几种方式**
+
+以button的Click事件为例：
+
+```
+<button id="btn">click me</button>
+function clickBtn(event){  //传入event对象
+    alert('click!');
+}
+```
+
+1. 直接在元素上绑定回调函数 
+
+`<button id="btn" onclick="clickBtn()">click me</button>`
+
+2. JS获取DOM元素对象后，对onclick属性赋值，绑定事件     
+
+`document.getElementById('btn').onclick=clickBtn;`
+
+3. JS获取DOM对象后，调用对象的addEventListener函数绑定事件
+
+`document.getElementById('btn').addEventListener('click',clickBtn);`
+
 #### 取消事件注册
 
 `evenTarget.removeEvenListener(type, listener [,useCapture])`
