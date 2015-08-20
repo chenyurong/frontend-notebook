@@ -42,20 +42,20 @@ BOM 为浏览器窗口对象的一组 API。
 
 **常用属性**
 
-|属性|解释|兼容|备注|推荐使用|
-|:---:|:---:|:---:|:----:|:---:|
-|window.innerWidth/innerHeight|浏览器可见区域宽高（包含滚动条，不包含边框）|ie9/10、chrome、firefox|-|-|
-|window.outerWidth/outerHeight|浏览器可见区域宽高（包含滚动条和边框）|ie9/10、chrome、firefox|-|-|
+|属性|解释|兼容|推荐使用|
+|:---:|:---:|:---:|:----:|
+|window.innerWidth/innerHeight|浏览器可见区域宽高（包含滚动条，不包含边框）|ie9/10、chrome、firefox|-|
+|window.outerWidth/outerHeight|浏览器可见区域宽高（包含滚动条和边框）|ie9/10、chrome、firefox|-|
 |-|-|-|-|
-|window.screenLeft/screenTop|浏览器内边距距离屏幕边缘的距离|ie6/7/8/9/10、chrome|在chrome浏览器中表示的是的浏览器外边缘距离屏幕边缘的距离|√|
+|window.screenLeft/screenTop|浏览器内边距距离屏幕边缘的距离¹|ie6/7/8/9/10、chrome|√|
 |window.screenX/screenY|浏览器外边距距离屏幕边缘的距离|ie9/10、chrome、firefox|-|×|
 |-|-|-|-|
-|window.pageXOffset/pageYOffset|表示浏览器X轴（水平）、Y轴（垂直）滚动条的偏移距离|ie9/10、chrome、firefox|-|√|
-|window.scrollX/scrollY|表示浏览器X轴（水平）、Y轴（垂直）滚动条的偏移距离|chrome、firefox|-|×|
+|window.pageXOffset/pageYOffset|表示浏览器X轴、Y轴滚动条的偏移距离|ie9/10、chrome、firefox|√|
+|window.scrollX/scrollY|表示浏览器X轴、Y轴滚动条的偏移距离|chrome、firefox|×|
 
 NOTE：
-- chrome的screenLeft和screenX是相等的（其目的是为了兼容ie和firefox，两个属性都兼备了，但更趋向于firefox，chrome的这种做法不止这一处，还有很多，其实这种做法便于开发者移植，但对开发者的开发过程产生了一定的混淆），ie9/10的screenLeft是大于screenX的
-- 在chrome和firefox中window.pageXOffset和window.scrollX是相等的，具体为什么会出现两个相等的属性值，不得而知。
+1. window.screenLeft/screenTop在chrome浏览器中表示的是的浏览器外边缘距离屏幕边缘的距离，而不是内边缘。所以chrome的screenLeft和screenX是相等的（其目的是为了兼容ie和firefox，两个属性都兼备了，但更趋向于firefox，chrome的这种做法不止这一处，还有很多，其实这种做法便于开发者移植，但对开发者的开发过程产生了一定的混淆），ie9/10的screenLeft是大于screenX的
+2. 在chrome和firefox中window.pageXOffset和window.scrollX是相等的，具体为什么会出现两个相等的属性值，不得而知。
 
 
 ```
@@ -139,35 +139,36 @@ __proto__: History
 
 **常用属性**
 
-|属性|解释|兼容|备注|推荐使用|
-|:---:|:---:|:---:|:----:|:---:|
-|screen.width/height|屏幕的宽度、高度（指的是屏幕的分辨率，单位为像素）|ie6/7/8/9/10、chrome、firefox|即你的显示器大小|-|
-|screen.availWidth/availHeight|屏幕的可用宽度、高度|ie6/7/8/9/10、chrome、firefox|即屏幕宽高去掉不可用区域（如任务栏、菜单栏）后的宽高|-|
+|属性|解释|兼容|推荐使用|
+|:---:|:---:|:---:|:----:|
+|screen.width/height|屏幕的宽度、高度（单位为像素）|ie6/7/8/9/10、chrome、firefox|-|
+|screen.availWidth/availHeight|屏幕的可用宽度、高度|ie6/7/8/9/10、chrome、firefox|-|
+
+NOTE：可用宽度指屏幕宽高去掉不可用区域（如任务栏、菜单栏）后的大小。
 
 ```
 console.log(screen.width + "," + screen.height);
 console.log(screen.availWidth + "," + screen.availHeight);
 ```
 
-参考资料：   
-1.[http://www.w3school.com.cn/jsref/dom_obj_screen.asp](http://www.w3school.com.cn/jsref/dom_obj_screen.asp)   
-2.[http://qianduanblog.com/post/js-learning-13-screen-client-offset-scroll-inner-avail-width-left.html](http://qianduanblog.com/post/js-learning-13-screen-client-offset-scroll-inner-avail-width-left.html)
-
-#### element（补充）
+#### element 
 
 元素的宽度、位移、距离等属性。以元素的盒模型为content-box为例。即：`box-sizing: content-box;`
 
 **常用属性**
 
-|属性|解释|兼容|备注|推荐使用|
-|:---:|:---:|:---:|:----:|:---:|
-|elment.clientWidth/clientHeight|元素宽度|ie6/7/8/9/10、chrome、firefox|有滚动条时：clientWidth=元素左内边距宽度+元素宽度+元素右内边距宽度-元素垂直滚动条宽度。无滚动条时：clientWidth=元素左内边距宽度+元素宽度+元素右内边距宽度|√|
-|element.clientLeft/clientTop|clientLeft为左边框宽度，clientTop为上边框宽度|ie6/7/8/9/10、chrome、firefox|-|-|
-|element.offsetWidth/offsetHeight|offsetWidth=元素左边框宽度+元素左内边距宽度+元素宽度+元素右内边距宽度+元素右边框宽度|ie6/7/8/9/10、chrome、firefox|与clientWidth相比，多了边框宽度|-|
-|element.offsetLeft/offsetTop|表示该元素相对于最近的定位祖先元素的距离|ie6/7/8/9/10、chrome、firefox|chrome：offsetLeft=定位祖先左边框宽度+定位祖先元素左内边距宽度+左位移+左外边距宽度。ie6/7/8/9/10、firefox：offsetLeft=定位祖先元素左内边距宽度+左位移+左外边距宽度。
-chrome比其他浏览器多计算了定位祖先元素的边框。offsetTop同理。|√|
-|element.scrollWidth/scrollHeight|只读属性以px为单位返回元素的内容区域宽度或元素的本身的宽度中更大的那个值|ie6/7/8/9/10、chrome、firefox|-|-|
-|element.scrollLeft/scrollTop|获得水平、垂直滚动条的距离|ie6/7/8/9/10、chrome、firefox|与clientWidth相比，多了边框宽度|-|
+|属性|解释|兼容|推荐使用|
+|:---:|:---:|:---:|:----:| 
+|elment.clientWidth/clientHeight¹|元素宽度|ie6/7/8/9/10、chrome、firefox|√|
+|element.clientLeft/clientTop|clientLeft为左边框宽度，clientTop为上边框宽度|ie6/7/8/9/10、chrome、firefox|-|
+|element.offsetWidth/offsetHeight²|元素宽度|ie6/7/8/9/10、chrome、firefox|-|
+|element.offsetLeft/offsetTop³|表示该元素相对于最近的定位祖先元素的距离|ie6/7/8/9/10、chrome、firefox|√|
+|element.scrollWidth/scrollHeight|元素本身宽度或内容宽度中较大的值|ie6/7/8/9/10、chrome、firefox|-|
+|element.scrollLeft/scrollTop|获得水平、垂直滚动条的滑动距离|ie6/7/8/9/10、chrome、firefox|-|
+
+1. 有滚动条时：clientWidth=元素左内边距宽度+元素宽度+元素右内边距宽度-元素垂直滚动条宽度。无滚动条时：clientWidth=元素左内边距宽度+元素宽度+元素右内边距宽度
+2. offsetWidth=元素左边框宽度+元素左内边距宽度+元素宽度+元素右内边距宽度+元素右边框宽度。与clientWidth相比，多了边框宽度。
+3. chrome：offsetLeft=定位祖先左边框宽度+定位祖先元素左内边距宽度+左位移+左外边距宽度。ie6/7/8/9/10、firefox：offsetLeft=定位祖先元素左内边距宽度+左位移+左外边距宽度。chrome比其他浏览器多计算了定位祖先元素的边框。offsetTop同理。
 
 ### window 方法
 
@@ -222,3 +223,9 @@ NOTE：无需记忆，更多属性在使用时查询文档。
 ```
 
 要注意的是，onbeforeunload一定要写在body元素里，单独用addEventListener()方式添加监听是无效的（具体原因不详）。
+
+
+参考资料：   
+1.[http://www.w3school.com.cn/jsref/dom_obj_screen.asp](http://www.w3school.com.cn/jsref/dom_obj_screen.asp)   
+2.[http://qianduanblog.com/post/js-learning-13-screen-client-offset-scroll-inner-avail-width-left.html](http://qianduanblog.com/post/js-learning-13-screen-client-offset-scroll-inner-avail-width-left.html)
+
