@@ -53,8 +53,8 @@ BOM 为浏览器窗口对象的一组 API。
 |window.pageXOffset/pageYOffset|表示浏览器X轴、Y轴滚动条的偏移距离|ie9/10、chrome、firefox|√|
 |window.scrollX/scrollY|表示浏览器X轴、Y轴滚动条的偏移距离|chrome、firefox|×|
 
-NOTE：
-1. window.screenLeft/screenTop在chrome浏览器中表示的是的浏览器外边缘距离屏幕边缘的距离，而不是内边缘。所以chrome的screenLeft和screenX是相等的（其目的是为了兼容ie和firefox，两个属性都兼备了，但更趋向于firefox，chrome的这种做法不止这一处，还有很多，其实这种做法便于开发者移植，但对开发者的开发过程产生了一定的混淆），ie9/10的screenLeft是大于screenX的
+NOTE：   
+1. window.screenLeft/screenTop在chrome浏览器中表示的是的浏览器外边缘距离屏幕边缘的距离，而不是内边缘。所以chrome的screenLeft和screenX是相等的（其目的是为了兼容ie和firefox，两个属性都兼备了，但更趋向于firefox，chrome的这种做法不止这一处，还有很多，其实这种做法便于开发者移植，但对开发者的开发过程产生了一定的混淆），ie9/10的screenLeft是大于screenX的。    
 2. 在chrome和firefox中window.pageXOffset和window.scrollX是相等的，具体为什么会出现两个相等的属性值，不得而知。
 
 
@@ -166,7 +166,7 @@ console.log(screen.availWidth + "," + screen.availHeight);
 |element.scrollWidth/scrollHeight|元素本身宽度或内容宽度中较大的值|ie6/7/8/9/10、chrome、firefox|-|
 |element.scrollLeft/scrollTop|获得水平、垂直滚动条的滑动距离|ie6/7/8/9/10、chrome、firefox|-|
 
-1. 有滚动条时：clientWidth=元素左内边距宽度+元素宽度+元素右内边距宽度-元素垂直滚动条宽度。无滚动条时：clientWidth=元素左内边距宽度+元素宽度+元素右内边距宽度
+1. 有滚动条时：clientWidth=元素左内边距宽度+元素宽度+元素右内边距宽度-元素垂直滚动条宽度。无滚动条时：clientWidth=元素左内边距宽度+元素宽度+元素右内边距宽度。
 2. offsetWidth=元素左边框宽度+元素左内边距宽度+元素宽度+元素右内边距宽度+元素右边框宽度。与clientWidth相比，多了边框宽度。
 3. chrome：offsetLeft=定位祖先左边框宽度+定位祖先元素左内边距宽度+左位移+左外边距宽度。ie6/7/8/9/10、firefox：offsetLeft=定位祖先元素左内边距宽度+左位移+左外边距宽度。chrome比其他浏览器多计算了定位祖先元素的边框。offsetTop同理。
 
