@@ -145,9 +145,9 @@
 ```
 ###### attr~=val
 
-选中attr属性中包含 `val` 属性值的元素。  
+选中attr属性值中包含 `val` 的元素。  
 
-`[class~=sports]` 选中class属性包含sports的元素
+`[class~=sports]` 选中class属性值中包含sports的元素
 
 ```html
 <html>
@@ -157,8 +157,8 @@
 <body>
 <div>
   <form action="">
-    <input type="text" class="a b d" value="ShuYi"><br> <!-- 黑底白字 -->
-    <input type="password" class="c" value="password"><br> <!-- 橙底白字 -->
+    <input type="text" class="a b d" value="ShuYi"><br> <!-- black white 黑底白字 -->
+    <input type="password" class="c" value="password"><br> <!-- orange white 橙底白字 -->
     <input type="button" value="button">
   </form>
 </div>
@@ -180,7 +180,7 @@
 
 ###### attr*=val
 
-选中attr属性值中包含`val`的元素，如果值中又符号或空格则需要使用引号 `""`。
+选中attr属性值中包含`val`的元素，如果值中有符号或空格则需要使用引号 `""`。
 
 ```html
 <html>
@@ -190,10 +190,10 @@
 <body>
 <div>
   <form action="">
-    <a href="http://lady.163.com">Lady</a><br> <!-- 蓝色 --> 
-    <a href="http://lady.163.com/chapter1">Lady/chapter1</a><br> <!-- 蓝色 -->
-    <a href="http://tech.163.com">tech</a><br> <!-- 红色 -->
-    <a href="">default color link</a> <!-- 黑色 -->
+    <a href="http://lady.163.com">Lady</a><br> <!-- blue  蓝色 --> 
+    <a href="http://lady.163.com/chapter1">Lady/chapter1</a><br> <!-- blue 蓝色 -->
+    <a href="http://tech.163.com">tech</a><br> <!-- red 红色 -->
+    <a href="">default color link</a> <!-- black 黑色 -->
   </form>
 </div>
 <style type="text/css">
@@ -260,11 +260,11 @@
 <div>
   <form action="">
   	<!-- 蓝色 -->
-    <a href="http://lady.163.com lady.163.com">Lady</a><br>
+    <a href="http://lady.163.com lady.163.com">Lady</a><br>   <! ← ← ← -->
     <!-- 蓝色 -->
-    <a href="http://lady.163.com/chapter1 lady.163.com">Lady/chapter1</a><br>
+    <a href="http://lady.163.com/chapter1 lady.163.com">Lady/chapter1</a><br>   <! ← ← ← -->
     <!-- 红色 -->
-    <a href="http://tech.163.comd tech.163.com">tech</a><br>
+    <a href="http://tech.163.comd tech.163.com">tech</a><br>   <! ← ← ← -->
     <!-- 黑色 -->
     <a href="">default color link</a>
   </form>
